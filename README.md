@@ -1,6 +1,6 @@
 # Electrolog-Project
 
-This is one of the projects of Dev Cluv 2021.
+This is one of the projects of Dev Club 2021.
 
 Website of electronics- ELECTROLOG
 
