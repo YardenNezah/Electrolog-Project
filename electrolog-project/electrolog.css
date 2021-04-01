@@ -1,0 +1,150 @@
+body {
+    width: 1200px;
+    font-size: 14px;
+}
+
+h1 {
+    text-align: center;
+    padding:20px;
+    text-shadow: 5px 5px 5px rgb(170,170,170);
+    background-color: #f1f1f1;
+}
+
+h2 {
+    text-align: center;
+}
+h3 {
+    width:150px;
+}
+
+header {
+    height: 700px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: 0 170px 0 100px;
+    width: 980px;
+    position: absolute;
+    background-color: gray;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.topRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#menuBtn {
+    cursor: pointer;
+}
+
+.CategoryNav {
+    background-color: pink;
+    width: 20%;
+}
+
+.favoriteProduct {
+    background-color: turquoise;
+    width: 70%;
+}
+
+.reviewAboutUs {
+    background-color: thistle;
+    width: 10%;
+}
+
+.searchBar {
+    background: url(../electrolog-project/image1.png) repeat 0 0 transparent;
+    border: 1px solid #4c4641;
+    color: #4c4641;
+    height: 30px;
+    position: relative;
+    text-align: left;
+    max-width: 540px !important;
+}
+
+#signUpLogin {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    padding:0 70px 0 10px;
+}
+
+.usersBtn {
+    padding:10px;
+    border: 3px solid black;
+    background-color: #f1f1f1;
+}
+
+.login-popup, .signUp-popup {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    border: 3px solid #f1f1f1;
+    width:350px;
+    background-color: white;
+    margin-left: 400px;
+}
+  
+.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+}
+
+.form-container input[type=text], .form-container input[type=password], .form-container input[type=date] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=date] {
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+}
+
+.form-container .submitPopupbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.form-container .closePopupbtn {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.bodyContainer {
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: space-between;
+}
+.footerList {
+    width:300px;
+    padding-left:40px;
+    padding-right: 60px;
+    text-align: left;
+}

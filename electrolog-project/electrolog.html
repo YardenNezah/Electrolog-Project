@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="חנות למכירת מחשבים ,טלוויזיות, סוללות, מסכים, מטענים, קונסולות משחקים ,מיקרופונים, שעונים חכמים,מדפסות, סטרימרים וכו'">
+    <meta name="Description" content="חנות אלקטרוניקה">
+    <link href="electrolog.css" rel="stylesheet">
+    <title>Electrolog Site</title>
+</head>
+<body>
+    <header class="header1">
+    <h1>ELECTROLOG</h1>
+    <hr>
+
+
+    <div class="topRow">
+    <input type="name" id="searchBar" class="searchBar" placeholder="Search product">
+
+    <div id="signUpLogin">
+        <a href="#" onclick="loginButton()" class="usersBtn" id="loginBtn"> Login</a>
+        <a href="#" onclick="signUpButton()" class="usersBtn" id="signUpBtn">Sign-up</a>
+    </div>
+</div>
+<hr>
+<div class= "bodyContainer">
+    <nav class="CategoryNav">
+        <ul>
+         <h2 id="menuBtn">Our Procucts</h2>
+         <div id="allCategories">
+            <li><a href="#" class="mainCategory">Sales</a></li>
+            <li><a href="#" class="mainCategory">Computers</a></li>
+            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Phones</a></li>
+               <ul>
+                   <li><a href="#" class="secondaryCategory">Cases</a></li>
+               </ul>
+            <li><a href="#" class="mainCategory">Headphones</a></li>
+            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Screens</a></li>
+               <ul>
+                   <li><a href="#" class="secondaryCategory">TV</a></li>
+                   <li><a href="#" class="secondaryCategory">Projectors</a></li>
+                   <li><a href="#" class="secondaryCategory">Computer Screens</a></li>
+               </ul>
+            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Accessories</a></li>
+               <ul>
+                   <li><a href="#" class="secondaryCategory">Mics and speakers</a></li>
+                   <li><a href="#" class="secondaryCategory">Butteries</a></li>
+                   <li><a href="#" class="secondaryCategory">Cables</a></li>
+                   <li><a href="#" class="secondaryCategory">Keyboards and mouse</a></li>
+                   <li><a href="#" class="secondaryCategory">Chargers</a></li>
+               </ul>
+            <li><a href="#" class="mainCategory">Tablets</a></li>
+            <li><a href="#" class="mainCategory">Smartwatch</a></li>
+            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Gaming</a></li>
+               <ul>
+                   <li><a href="#" class="secondaryCategory">Consoles</a></li>
+                   <li><a href="#" class="secondaryCategory">remote control’s and...</a></li>
+               </ul>
+            <li><a href="#" class="mainCategory">Printers and scanners</a></li>
+            <li><a href="#" class="mainCategory">Streamers</a></li>
+         </div>
+        </ul>
+      </nav>
+<div class="favoriteProduct">
+    <h2>Favorite Products</h2>
+</div>
+
+<div class="reviewAboutUs">
+    <h2>Reviews About Us</h2>
+</div>
+    </div>
+
+<!-- login popup window: -->
+<div class="login-popup" id="login-popup" style="display:none;">
+<form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button type="submit" style="margin-left:90px;"> Forgot Password </button>
+    <button type="submit" class="submitPopupbtn"> Login</button>
+    <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<!-- sign-up popup window: -->
+<div class="signUp-popup" id="signUp-popup" style="display:none;">
+<form action="/action_page.php" class="form-container">
+    <h1>Sign-up</h1>
+    <h2>Sign-up for our membership, and get 15% off your first purchase! </h2>
+    <p>Please fill in this form to create an account.</p>
+
+    <label for="name"><b>Full name</b></label>
+    <input type="text" placeholder="Enter Your Name" name="name" required>
+    
+    <label for="Date"><b>Date of birth</b></label>
+    <input type="date" placeholder="Enter Date Of Birth" name="date" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
+    <button type="submit" class="submitPopupbtn">Sign-up</button>
+    <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+</header>
+    
+        <div class="footer" id="footer">
+            <ul class="footerList" id="aboutUs">
+                <h3>About Us</h3>
+                <li><a href="#" class="about">About</a></li>
+                <li><a href="#" class="developers">Developers</a></li>
+                <li><a href="#" class="careers">Careers</a></li>
+            </ul>
+            <ul class="footerList" id="termsOfUse">
+                <h3>Terms Of Use</h3>
+                <li><a href="#" class="websiteTerms">Website Terms</a></li>
+                <li><a href="#" class="shippingTerms">Shipping Terms</a></li>
+                <li><a href="#" class="privacyPolicy">Privacy Policy</a></li>
+            </ul>
+            <ul class="footerList" id="contactUs">
+                <h3>Contact Us</h3>
+                <li><a href="#" class="adress">Address</a></li>
+                <li><a href="#" class="phones">Phones</a></li>
+                <li><a href="#" class="email">Email</a></li>
+                <li><a href="#" class="email">Leave a message</a></li>
+            </ul>
+        </div>
+
+</body>
+<script src="electrolog.js"></script>
+</html>
+
