@@ -187,6 +187,121 @@ justify-content: space-between;
     text-align: left;
 }
 
+.grid{
+    height: 100%;
+    width: 98%;
+    margin: 0 auto;
+
+}
+.row {
+    height: 360px;
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.product{
+    height: 100%;
+    width: 205px;
+    background-color:white;
+}
+.product_heading{
+    margin-top: 1px;
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+}
+.product_heading_logo{
+    width: 40%;
+    height: 100%;
+}
+.product_heading_buttons{
+    width: 25%;
+    height: 100%;
+    margin-right: 10px;
+    text-align: center;
+
+}
+.like_button{
+    margin-top: 5px;
+    width: 80%;
+    height: 80%;
+}
+.product_img{
+    width: 100%;
+    height: 55%;
+}
+.product_MKT{
+    width: 100%;
+    height: 7%;
+    display: flex;
+}
+.static_text_MKT{
+    margin-top: 5px;
+    width: 50%;
+    height: 100%;
+}
+.MKT{
+    margin-top: 5px;
+    width: 50%;
+    height: 100%;
+}
+
+.product_decription{
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+.static_text_description{
+    width: 35%;
+    height: 100%;
+}
+.description{
+    width: 65%;
+    height: 100%;
+}
+.product_buying{
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+.product_price{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.static_text_price{
+    margin-top: 7px;
+    width: 35%;
+    height: 100%;
+}
+.price{
+    margin-top: 7px;
+    width: 65%;
+    height: 100%;
+}
+.buying_buttons{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buy_button{
+    margin: 3px 0 0 5px;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+}
+.cart_button{
+    margin: 3px 5px 0 0;
+    width: 40%;
+    height: 80%;
+}
+.buy_button_text{
+    margin-top: 6px;
+}
 #popupAbout,#popupDevelopers,#popupCarrers,#popupPolicy,#popupWebsitePolicy,#popupShipping{
 height: 100vh;
 width: 100%;
@@ -230,5 +345,5 @@ visibility: hidden;
     color: black;
     font-size: xx-large;
 }
-}
+
 
