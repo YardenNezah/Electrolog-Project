@@ -186,3 +186,49 @@ justify-content: space-between;
     padding-right: 60px;
     text-align: left;
 }
+
+#popupAbout,#popupDevelopers,#popupCarrers,#popupPolicy,#popupWebsitePolicy,#popupShipping{
+height: 100vh;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+background-color: black;
+z-index: 9999;
+opacity: 0.85;
+visibility: hidden;
+
+}
+#popupAbout .close,#popupDevelopers .close,#popupCarrers .close,#popupPolicy .close,#popupWebsitePolicy .close,#popupShipping .close{
+    color: green;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+#popupAbout:target,#popupDevelopers:target,#popupCarrers:target,#popupPolicy:target,#popupWebsitePolicy:target,#popupShipping:target{
+    visibility: visible;
+}
+#popupAbout .content,#popupDevelopers .content,#popupCarrers .content,#popupPolicy .content,
+#popupWebsitePolicy .content,#popupShipping .content{
+    width: 75%;
+    background-color: white;
+    height: 20rem;
+    box-shadow: 0 2rem 4rem rgba(#000,.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    overflow-y:scroll;
+}
+
+#popupAbout .content .heading,#popupDevelopers .content .heading,#popupCarrers .content .heading,
+#popupPolicy .content .heading,#popupWebsitePolicy .content .heading,#popupShipping .content .heading{
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+}
+}
+
