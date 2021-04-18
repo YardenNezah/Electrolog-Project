@@ -20,14 +20,76 @@
 
 
         <div class="topRow">
-            <input type="name" id="searchBar" class="searchBar" placeholder="Search product">
+            <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+            </div>
+            <div><input type="name" id="searchBar" class="searchBar" placeholder="Search product"></div>
 
             <div id="signUpLogin">
-                <a href="#" onclick="loginButton()" class="usersBtn" id="loginBtn"> Login</a>
-                <a href="#" onclick="signUpButton()" class="usersBtn" id="signUpBtn">Sign-up</a>
+                <button onclick="loginButton()" class="usersBtn" id="loginBtn"> Login </button>
+                <button onclick="signUpButton()" class="usersBtn" id="signUpBtn"> Sign-up </button>
             </div>
         </div>
-        <hr>
+
+    </header>
+<hr>
+
+        <!-- login popup window: -->
+        <div class="login-popup" id="login-popup" style="display:none;">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit" style="margin-left:90px;"> Forgot Password </button>
+                <button type="submit" class="submitPopupbtn"> Login</button>
+                <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <!-- sign-up popup window: -->
+        <div class="signUp-popup" id="signUp-popup" style="display:none;">
+            <form action="/action_page.php" class="form-container">
+                <h1>Sign-up</h1>
+                <h2>Sign-up for our membership, and get 15% off your first purchase! </h2>
+                <p>Please fill in this form to create an account.</p>
+
+                <label for="name"><b>Full name</b></label>
+                <input type="text" placeholder="Enter Your Name" name="name" required>
+
+                <label for="Date"><b>Date of birth</b></label>
+                <input type="date" placeholder="Enter Date Of Birth" name="date" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.
+                </label>
+                <button type="submit" class="submitPopupbtn">Sign-up</button>
+                <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        
         <div class="bodyContainer">
             <nav class="CategoryNav">
                 <div>
@@ -78,11 +140,17 @@
                                         width="100%" height="100%">
                                 </div>
                                 <div class="product_heading_buttons">
-                                    <button class="like_button"></button>
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/></svg>
+                                     
+                                      
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+                                    
                                 </div>
                             </div>
                             <div class="product_img">
-                                <img src="https://img.ksp.co.il/item/50213/b_1.jpg" alt="Girl in a jacket" width="100%"
+                                <img src="https://img.ksp.co.il/item/50213/b_1.jpg" alt="product1" width="80%"
                                     height="100%">
                             </div>
                             <div class="product_MKT">
@@ -98,13 +166,44 @@
                                     <div class="static_text_price"><b>Price: </b></div>
                                     <div class="price">101$</div>
                                 </div>
-                                <div class="buying_buttons">
-                                    <button class="buy_button">Buy</button>
-                                    <button class="cart_button"></button>
-                                </div>
+\                                    <button class="buy_button">Add to cart </button>
                             </div>
                         </div>
-                        <div class="product"></div>
+                        <div class="product">
+                            <div class="product_heading">
+                                <div class="product_heading_logo">
+                                    <img src="pngwing.com.png" alt="applelogo" width="70%" height="100%">
+                                </div>
+                                <div class="product_heading_buttons">
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/></svg>
+                                     
+                                      
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+                                    
+                                </div>
+                            </div>
+                            <div class="product_img">
+                                <img src="iphone.png" alt="product1" width="80%"
+                                    height="100%">
+                            </div>
+                            <div class="product_MKT">
+                                <div class="static_text_MKT"><b>Electrolog MKT: </b></div>
+                                <div class="MKT">10100101</div>
+                            </div>
+                            <div class="product_decription">
+                                <div class="static_text_description"><b>Descripion: </b></div>
+                                <div class="description">Iphone 8</div>
+                            </div>
+                            <div class="product_buying">
+                                <div class="product_price">
+                                    <div class="static_text_price"><b>Price: </b></div>
+                                    <div class="price">101$</div>
+                                </div>
+\                                    <button class="buy_button">Add to cart </button>
+                            </div>
+                        </div>
                         <div class="product"></div>
                     </div>
                     <div class="row">
@@ -121,55 +220,7 @@
             </div>
         </div>
 
-        <!-- login popup window: -->
-        <div class="login-popup" id="login-popup" style="display:none;">
-            <form action="/action_page.php" class="form-container">
-                <h1>Login</h1>
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                <button type="submit" style="margin-left:90px;"> Forgot Password </button>
-                <button type="submit" class="submitPopupbtn"> Login</button>
-                <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
-            </form>
-        </div>
-
-        <!-- sign-up popup window: -->
-        <div class="signUp-popup" id="signUp-popup" style="display:none;">
-            <form action="/action_page.php" class="form-container">
-                <h1>Sign-up</h1>
-                <h2>Sign-up for our membership, and get 15% off your first purchase! </h2>
-                <p>Please fill in this form to create an account.</p>
-
-                <label for="name"><b>Full name</b></label>
-                <input type="text" placeholder="Enter Your Name" name="name" required>
-
-                <label for="Date"><b>Date of birth</b></label>
-                <input type="date" placeholder="Enter Date Of Birth" name="date" required>
-
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                </label>
-
-                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
-                <button type="submit" class="submitPopupbtn">Sign-up</button>
-                <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
-            </form>
-        </div>
-
-    </header>
 
     <div class="footer" id="footer">
         <ul class="footerList" id="aboutUs">
@@ -189,7 +240,7 @@
             <li><strong>Address:</strong><br>The College of Management Academic Studies (COLMAN) <br> Eli Vizel 2 ,
                 Rishon Le Zion</li>
             <li><strong>Phones:</strong>
-                <br> Yarden Tzaref - 0523383837
+                <br> Yarden Tsaraf - 0523383837
                 <br> Yarin Israeli - 0542014439
                 <br> Or Shraoni - 0545750789
                 <br> Amir Titelman - 0543114202
@@ -221,7 +272,7 @@
                 Developers
             </div>
             <div class="main">
-                <br> Yarden Tzaref
+                <br> Yarden Tsaraf
                 <br> Yarin Israeli
                 <br> Or Shraoni
                 <br> Amir Titelman

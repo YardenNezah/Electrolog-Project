@@ -1,14 +1,16 @@
+var popupMessage1= document.getElementById('login-popup');
+var popupMessage2= document.getElementById('signUp-popup');
 
 //open login popup window:
-var popupMessage1= document.getElementById('login-popup');
 function loginButton() {
     popupMessage1.style.display='grid';
+    popupMessage2.style.display='none';
 }
 
 //open sign-up popup window:
-var popupMessage2= document.getElementById('signUp-popup');
 function signUpButton() {
     popupMessage2.style.display='grid';
+    popupMessage1.style.display='none';
 }
 
 // open categories of menu
