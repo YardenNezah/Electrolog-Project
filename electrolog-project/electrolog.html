@@ -7,6 +7,7 @@
     <meta name="Keywords" content="חנות למכירת מחשבים ,טלוויזיות, סוללות, מסכים, מטענים, קונסולות משחקים ,מיקרופונים, שעונים חכמים,מדפסות, סטרימרים וכו'">
     <meta name="Description" content="חנות אלקטרוניקה">
     <link href="electrolog.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <title>Electrolog Site</title>
 </head>
 <body>
@@ -26,41 +27,41 @@
 <hr>
 <div class= "bodyContainer">
     <nav class="CategoryNav">
-        <ul>
+        <div>
          <h2 id="menuBtn">Our Procucts</h2>
          <div id="allCategories">
-            <li><a href="#" class="mainCategory">Sales</a></li>
-            <li><a href="#" class="mainCategory">Computers</a></li>
-            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Phones</a></li>
-               <ul>
-                   <li><a href="#" class="secondaryCategory">Cases</a></li>
-               </ul>
-            <li><a href="#" class="mainCategory">Headphones</a></li>
-            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Screens</a></li>
-               <ul>
-                   <li><a href="#" class="secondaryCategory">TV</a></li>
-                   <li><a href="#" class="secondaryCategory">Projectors</a></li>
-                   <li><a href="#" class="secondaryCategory">Computer Screens</a></li>
-               </ul>
-            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Accessories</a></li>
-               <ul>
-                   <li><a href="#" class="secondaryCategory">Mics and speakers</a></li>
-                   <li><a href="#" class="secondaryCategory">Butteries</a></li>
-                   <li><a href="#" class="secondaryCategory">Cables</a></li>
-                   <li><a href="#" class="secondaryCategory">Keyboards and mouse</a></li>
-                   <li><a href="#" class="secondaryCategory">Chargers</a></li>
-               </ul>
-            <li><a href="#" class="mainCategory">Tablets</a></li>
-            <li><a href="#" class="mainCategory">Smartwatch</a></li>
-            <li><a href="#" onClick="openSecCategory()" class="mainCategory">Gaming</a></li>
-               <ul>
-                   <li><a href="#" class="secondaryCategory">Consoles</a></li>
-                   <li><a href="#" class="secondaryCategory">remote control’s and...</a></li>
-               </ul>
-            <li><a href="#" class="mainCategory">Printers and scanners</a></li>
-            <li><a href="#" class="mainCategory">Streamers</a></li>
+            <a href="#" class="mainCategory">Sales</a>
+            <a href="#" class="mainCategory">Computers</a>
+            <a href="#" onClick="openSecCategory()" class="mainCategory dropdown">Phones</a>
+               <div class="secondaryCategoryContainer">
+                   <a href="#" class="secondaryCategory">Cases</a>
+               </div>
+            <a href="#" class="mainCategory">Headphones</a>
+            <a href="#" onClick="openSecCategory()" class="mainCategory dropdown">Screens</a>
+               <div class="secondaryCategoryContainer">
+                   <a href="#" class="secondaryCategory">TV</a>
+                   <a href="#" class="secondaryCategory">Projectors</a>
+                   <a href="#" class="secondaryCategory">Computer Screens</a>
+               </div>
+            <a href="#" onClick="openSecCategory()" class="mainCategory dropdown">Accessories</a>
+               <div class="secondaryCategoryContainer">
+                   <a href="#" class="secondaryCategory">Mics and speakers</a>
+                   <a href="#" class="secondaryCategory">Butteries</a>
+                   <a href="#" class="secondaryCategory">Cables</a>
+                   <a href="#" class="secondaryCategory">Keyboards and mouse</a>
+                   <a href="#" class="secondaryCategory">Chargers</a>
+               </div>
+            <a href="#" class="mainCategory">Tablets</a>
+            <a href="#" class="mainCategory">Smartwatch</a>
+            <a href="#" onClick="openSecCategory()" class="mainCategory dropdown">Gaming</a>
+               <div class="secondaryCategoryContainer">
+                   <a href="#" class="secondaryCategory">Consoles</a>
+                   <a href="#" class="secondaryCategory">remote control’s and...</a>
+               </div>
+            <a href="#" class="mainCategory">Printers and scanners</a>
+            <a href="#" class="mainCategory">Streamers</a>
          </div>
-        </ul>
+        </div>
       </nav>
 <div class="favoriteProduct">
     <h2>Favorite Products</h2>
