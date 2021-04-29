@@ -8,7 +8,7 @@ body {
     font-size: 14px;
     margin: 0 15px;
     font-family: "Trirong", serif;
-
+    background-color: beige;    
 }
 
 h1 {
@@ -31,6 +31,9 @@ h3 {
     padding: 0 170px 0 100px;
     width: 100%;
     background-color: gray;
+
+    align-items: center;
+    text-align: center;
 }
 
 hr {
@@ -45,18 +48,13 @@ hr {
     align-items: baseline;
 }
 
-#menuBtn {
-    cursor: pointer;
-}
 
 .CategoryNav {
-    background-color: #7386D5;
     height: 100%;
-    width: 200px;
+    width: 15%;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    padding-top: 20px;
 }
 
 .mainCategory, .dropdown, .secondaryCategory{
@@ -76,60 +74,60 @@ hr {
     color: #fff;
 }
 
-
 .secondaryCategoryContainer{
     display: none;
-    background-color: #8a9ae0;
     padding-left: 8px;
 }
 
-
 .favoriteProduct {
-    background-color: turquoise;
-    width: 70%;
+    width: 65%;
 }
 
 .reviewAboutUs {
-    background-color: thistle;
-    width: 10%;
+    width: 20%;
 }
 
 .searchBar {
-    background: url(../electrolog-project/image1.png) repeat 0 0 transparent;
     border: 1px solid #4c4641;
+    border-radius: 5px;
     color: #4c4641;
-    height: 30px;
-    position: relative;
+    width: 450px;
     text-align: left;
-    max-width: 540px !important;
+    height: 30px;
+    margin-right: 80px;
+}
+
+.bi {
+    border: 2px solid black;
+    padding:5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.bi-heart {
+    padding: 5px 5px 0 5px;
+}
+
+.usersBtn {
+    border: 2px solid black;
+    text-align: center;
+    padding:10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 #signUpLogin {
     display: flex;
     flex-direction: row;
-    float: left;
-    padding:0 70px 0 10px;
-}
-
-.usersBtn {
-    padding:10px;
-    border: 3px solid black;
-    background-color: #f1f1f1;
 }
 
 .login-popup, .signUp-popup {
     display: none;
-    position: absolute;
-    bottom: 0;
-    border: 3px solid #f1f1f1;
+    position:absolute;
+    border: 3px solid black;
     width:350px;
     background-color: white;
     margin-left: 400px;
-}
-  
-.signupbtn {
-    float: left;
-    width: 50%;
 }
 
 .form-container {
@@ -142,39 +140,24 @@ hr {
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
-input[type=text], input[type=password], input[type=date] {
-    width: 100%;
-    padding: 15px;
-    display: inline-block;
-}
-
-.form-container .submitPopupbtn {
-    background-color: #4CAF50;
-    color: white;
+.form-container .submitPopupbtn, .form-container .closePopupbtn {
+    background-color: grey;
     padding: 16px 20px;
     cursor: pointer;
-    width: 100%;
     margin-bottom:10px;
-}
-
-.form-container .closePopupbtn {
-    background-color: red;
-    color: white;
-    padding: 16px 20px;
-    cursor: pointer;
     width: 100%;
-    margin-bottom:10px;
 }
 
 .bodyContainer {
-display: flex;
-flex-direction: row;
-width: 100%;
-justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
+
 .footerList {
     width:300px;
     padding-left:40px;
@@ -182,122 +165,130 @@ justify-content: space-between;
     text-align: left;
 }
 
-.grid{
+.grid {
     height: 100%;
-    width: 98%;
-    margin: 0 auto;
-
+    width: 100%;
+    margin: 15px auto;
 }
+
 .row {
     height: 360px;
     width: 100%;
-    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
+}
 
-}
-.product{
+.product {
     height: 100%;
-    width: 205px;
+    width: 25%;
     background-color:white;
+    border:1px solid grey;
+    padding: 5px;
 }
-.product_heading{
+
+.product_heading {
     margin-top: 1px;
     width: 100%;
     height: 13%;
     display: flex;
     justify-content: space-between;
+    margin-bottom:10px;
 }
-.product_heading_logo{
+
+.product_heading_logo {
     width: 40%;
     height: 100%;
 }
-.product_heading_buttons{
-    width: 25%;
-    height: 100%;
-    margin-right: 10px;
-    text-align: center;
 
+.product_heading_buttons {
+    width: 50%;
+    height: 100%;
+    margin-top:5px;
+    text-align: center;
 }
-.like_button{
-    margin-top: 5px;
-    width: 80%;
-    height: 80%;
-}
-.product_img{
-    width: 100%;
+
+.product_img {
     height: 55%;
+    margin-left: 30px;
 }
-.product_MKT{
+
+.product_MKT {
     width: 100%;
-    height: 7%;
+    height: 6%;
     display: flex;
 }
-.static_text_MKT{
-    margin-top: 5px;
-    width: 50%;
-    height: 100%;
-}
-.MKT{
-    margin-top: 5px;
-    width: 50%;
+
+.static_text_MKT {
+    width: 80%;
     height: 100%;
 }
 
-.product_decription{
+.MKT {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+
+.product_name {
     width: 100%;
-    height: 15%;
+    height: 13%;
     display: flex;
 }
-.static_text_description{
+
+.static_text_name {
     width: 35%;
     height: 100%;
 }
-.description{
+
+.name {
     width: 65%;
     height: 100%;
+    text-align: right;
 }
-.product_buying{
+
+.product_buying {
     width: 100%;
-    height: 10%;
+    height: 6%;
     display: flex;
+    margin: 0;
 }
-.product_price{
+
+.product_price {
     width: 50%;
     height: 100%;
     display: flex;
 }
-.static_text_price{
-    margin-top: 7px;
+
+.static_text_price {
     width: 35%;
     height: 100%;
 }
-.price{
-    margin-top: 7px;
+
+.price {
     width: 65%;
     height: 100%;
+    margin-left: 5px;
 }
-.buying_buttons{
-    width: 50%;
+
+.buy_button {
+    padding-bottom: 20px;
+    width: 45%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.buy_button{
-    margin: 3px 0 0 5px;
-    width: 40%;
-    height: 80%;
     text-align: center;
+    margin-left: 5px;
 }
-.cart_button{
+
+.cart_button {
     margin: 3px 5px 0 0;
+    padding: 10px;
     width: 40%;
     height: 80%;
 }
+
 .buy_button_text{
     margin-top: 6px;
 }
-#popupAbout,#popupDevelopers,#popupCarrers,#popupPolicy,#popupWebsitePolicy,#popupShipping{
+#popupAbout,#popupDevelopers,#popupCarrers,#popupPolicy,#popupWebsitePolicy,#popupShipping,#popupMessage{
 height: 100vh;
 width: 100%;
 position: fixed;
@@ -309,19 +300,30 @@ opacity: 0.85;
 visibility: hidden;
 
 }
-#popupAbout .close,#popupDevelopers .close,#popupCarrers .close,#popupPolicy .close,#popupWebsitePolicy .close,#popupShipping .close{
-    color: green;
+#popupAbout .close,#popupDevelopers .close,#popupCarrers .close,#popupPolicy .close,#popupWebsitePolicy .close,
+#popupShipping .close,#popupMessage .close{
+    color: black;
+
+
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
     font-size: 2rem;
     text-decoration: none;
 }
-#popupAbout:target,#popupDevelopers:target,#popupCarrers:target,#popupPolicy:target,#popupWebsitePolicy:target,#popupShipping:target{
+
+#popupAbout:target,#popupDevelopers:target,#popupCarrers:target,#popupPolicy:target,
+#popupWebsitePolicy:target,#popupShipping:target,#popupMessage:target{
+
+
     visibility: visible;
 }
+
 #popupAbout .content,#popupDevelopers .content,#popupCarrers .content,#popupPolicy .content,
-#popupWebsitePolicy .content,#popupShipping .content{
+
+#popupWebsitePolicy .content,#popupShipping .content,#popupMessage .content{
+
+
     width: 75%;
     background-color: white;
     height: 20rem;
@@ -335,10 +337,56 @@ visibility: hidden;
 }
 
 #popupAbout .content .heading,#popupDevelopers .content .heading,#popupCarrers .content .heading,
-#popupPolicy .content .heading,#popupWebsitePolicy .content .heading,#popupShipping .content .heading{
+#popupPolicy .content .heading,#popupWebsitePolicy .content .heading,#popupShipping .content .heading,
+#popupMessage .content .heading{
+
     text-align: center;
     color: black;
     font-size: xx-large;
 }
 
+.bi-chat-left {
+    width:100%;
+    height:30%;
+    padding:0;
+    border: none;
+    background-color: #fff;
+    margin-top: 15px;
+}
 
+.btncart {
+    border: 2px solid black;
+    text-align: center;
+    padding:10px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#loginBtn {
+    margin:1px;
+}
+
+#signUpBtn {
+    margin:1px;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #b9d4d1;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 35px solid transparent;
+	border-top-color: #b9d4d1;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -17.5px;
+	margin-bottom: -35px;
+}
