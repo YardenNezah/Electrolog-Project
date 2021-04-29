@@ -1,5 +1,10 @@
+
+import  {firebaseConfig} from "../config"
+
+
 var popupMessage1= document.getElementById('login-popup');
 var popupMessage2= document.getElementById('signUp-popup');
+
 
 //open login popup window:
 function loginButton() {

@@ -1,0 +1,23 @@
+{
+  "name": "electrolog-project",
+  "version": "1.0.0",
+  "description": "This is one of the projects of Dev Club 2021.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yardentzaraf/Electrolog-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yardentzaraf/Electrolog-Project/issues"
+  },
+  "homepage": "https://github.com/yardentzaraf/Electrolog-Project#readme",
+  "dependencies": {
+    "firebase": "^8.4.2",
+    "firebaseui": "^4.8.0"
+  }
+}

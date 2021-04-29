@@ -10,6 +10,7 @@
     <meta name="Description" content="חנות אלקטרוניקה">
     <link href="electrolog.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
     <title>Electrolog Site</title>
 </head>
 
@@ -218,6 +219,57 @@
         </div>
 
 
+        <!-- login popup window: -->
+        <div class="login-popup" id="login-popup" style="display:none;">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="password" name="psw" required>
+                <button type="submit" style="margin-left:90px;"> Forgot Password </button>
+                <button type="submit" class="submitPopupbtn" id="btnLogin"> Login</button>
+                <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <!-- sign-up popup window: -->
+        <div class="signUp-popup" id="signUp-popup" style="display:none;">
+            <form action="/action_page.php" class="form-container">
+                <h1>Sign-up</h1>
+                <h2>Sign-up for our membership, and get 15% off your first purchase! </h2>
+                <p>Please fill in this form to create an account.</p>
+
+                <label for="name"><b>Full name</b></label>
+                <input type="text" placeholder="Enter Your Name" name="name" required>
+
+                <label for="Date"><b>Date of birth</b></label>
+                <input type="date" placeholder="Enter Date Of Birth" name="date" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
+                <button type="submit" class="submitPopupbtn" id="btnSignUp">Sign-up</button>
+                <button type="submit" class="closePopupbtn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </header>
+
+
+
 
     <div class="footer" id="footer">
         <ul class="footerList" id="aboutUs">
@@ -244,9 +296,7 @@
             </li>
             <li><strong>Email :</strong> <br>Electrolog@gmail.com</li>
             <li>
-                <label for="message"><b>Leave a message:</b></label>
-                <input type="text" placeholder="Leave a message" name="message">
-                <button type=" submit button">submit</button>
+                <a href="#popupMessage" class="LeaveMessage">Leave a message</a></li>
 
             </li>
         </ul>
@@ -291,7 +341,7 @@
         <div class="content" id="content">
             <a href="#footer" class="close">&times;</a>
             <div class="heading">
-                Website Policy
+                Website Terms
             </div>
             <div class="main">
             </div>
@@ -301,7 +351,7 @@
         <div class="content" id="content">
             <a href="#footer" class="close">&times;</a>
             <div class="heading">
-                Shipping terms
+                Shipping Terms
             </div>
             <div class="main">
             </div>
@@ -617,7 +667,23 @@
         </div>
     </div>
 
+    <div id="popupMessage">
+        <div class="content" id="content">
+            <a href="#footer" class="close">&times;</a>
+            <div class="heading">
+                Leave a Message
+            </div>
+            <div class="main">
+                <input type="text" placeholder="Leave a message" name="message">
+                <button type=" submit button">submit</button>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
+<script src="config.js"></script>
 <script src="electrolog.js"></script>
 
 </html>

@@ -31,6 +31,7 @@ h3 {
     padding: 0 170px 0 100px;
     width: 100%;
     background-color: gray;
+
     align-items: center;
     text-align: center;
 }
@@ -284,20 +285,26 @@ hr {
     height: 80%;
 }
 
-#popupAbout,#popupDevelopers,#popupCarrers,#popupPolicy,#popupWebsitePolicy,#popupShipping {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
-    z-index: 9999;
-    opacity: 0.85;
-    visibility: hidden;
-    }
+.buy_button_text{
+    margin-top: 6px;
+}
+#popupAbout,#popupDevelopers,#popupCarrers,#popupPolicy,#popupWebsitePolicy,#popupShipping,#popupMessage{
+height: 100vh;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+background-color: black;
+z-index: 9999;
+opacity: 0.85;
+visibility: hidden;
 
-#popupAbout .close,#popupDevelopers .close,#popupCarrers .close,#popupPolicy .close,#popupWebsitePolicy .close,#popupShipping .close {
-    color: green;
+}
+#popupAbout .close,#popupDevelopers .close,#popupCarrers .close,#popupPolicy .close,#popupWebsitePolicy .close,
+#popupShipping .close,#popupMessage .close{
+    color: black;
+
+
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
@@ -305,12 +312,18 @@ hr {
     text-decoration: none;
 }
 
-#popupAbout:target,#popupDevelopers:target,#popupCarrers:target,#popupPolicy:target,#popupWebsitePolicy:target,#popupShipping:target {
+#popupAbout:target,#popupDevelopers:target,#popupCarrers:target,#popupPolicy:target,
+#popupWebsitePolicy:target,#popupShipping:target,#popupMessage:target{
+
+
     visibility: visible;
 }
 
 #popupAbout .content,#popupDevelopers .content,#popupCarrers .content,#popupPolicy .content,
-#popupWebsitePolicy .content,#popupShipping .content {
+
+#popupWebsitePolicy .content,#popupShipping .content,#popupMessage .content{
+
+
     width: 75%;
     background-color: white;
     height: 20rem;
@@ -324,7 +337,9 @@ hr {
 }
 
 #popupAbout .content .heading,#popupDevelopers .content .heading,#popupCarrers .content .heading,
-#popupPolicy .content .heading,#popupWebsitePolicy .content .heading,#popupShipping .content .heading {
+#popupPolicy .content .heading,#popupWebsitePolicy .content .heading,#popupShipping .content .heading,
+#popupMessage .content .heading{
+
     text-align: center;
     color: black;
     font-size: xx-large;
